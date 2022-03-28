@@ -1,0 +1,9 @@
+/*页签*/
+/* 非聚焦页签样式 */
+.layout-tab-bar .item:not(.item--focus) {
+	background-color: #76878d38;
+	/* 圆角 */
+	border-radius: 15px, 15px, 0px, 0px;
+}
+
+/*页签结束*/

@@ -1,0 +1,13 @@
+/* 引用格式 */
+.protyle-wysiwyg [data-node-id] span[data-type='block-ref']::before {
+	display: inline-block;
+	content: '[[';
+}
+.protyle-wysiwyg [data-node-id] span[data-type='block-ref']::after {
+	display: inline-block;
+	content: ']]';
+}
+.protyle-wysiwyg [data-node-id] span[data-type='block-ref']:hover {
+	color: var(--b3-protyle-inline-blockref-hover-color);
+}
+/* 引用格式结束 */

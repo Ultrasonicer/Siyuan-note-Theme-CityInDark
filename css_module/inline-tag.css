@@ -1,0 +1,23 @@
+/* 标签样式 */
+.protyle-wysiwyg [data-node-id] span[data-type='tag'] {
+	color: #000000;
+	background-color: #00ddff;
+	font-weight: bold;
+	border-radius: 5px;
+	font-size: 85%;
+	padding: 0em 0.375em 0.08em;
+	margin: 0em 0.25em;
+	transform: translateY(-1.5px);
+	box-sizing: border-box;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	z-index: 20;
+}
+.protyle-wysiwyg [data-node-id] span[data-type='tag']:hover {
+	color: #0a88d1;
+}
+.protyle-wysiwyg [data-node-id] span[data-type='tag']::before {
+	display: inline-block;
+	content: '#';
+}
+/* 标签样式结束 */

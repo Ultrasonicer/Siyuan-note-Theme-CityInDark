@@ -1,0 +1,8 @@
+/* 块嵌入样式 */
+.protyle-wysiwyg [data-node-id].render-node[data-type='NodeBlockQueryEmbed'] {
+	box-shadow: 0px 0px 7px 1px #386d79;
+	border-left: 0px dashed #010e1b;
+	padding: 4px 10px;
+	margin-bottom: 12px;
+}
+/* 块嵌入样式结束 */

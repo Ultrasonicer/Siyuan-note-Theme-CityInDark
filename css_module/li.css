@@ -1,0 +1,5 @@
+/* 列表样式 */
+.protyle-wysiwyg [data-node-id].li > [data-node-id]:before {
+	border-left: 1px solid #4f565e;
+	width: 0.95px;
+}

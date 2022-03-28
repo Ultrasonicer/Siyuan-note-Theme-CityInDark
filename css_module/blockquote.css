@@ -1,0 +1,12 @@
+/* 引述块样式 */
+.b3-typography blockquote,
+.b3-typography .bq,
+.protyle-wysiwyg blockquote,
+.protyle-wysiwyg .bq {
+	color: #9fa8b1;
+	background-color: #1f2d3b;
+	border-left: 4px solid #0a88d1;
+	padding: 0.5em 1em;
+	margin: 0.5em 0;
+}
+/* 引述块样式结束 */

@@ -1,0 +1,11 @@
+/* 键盘样式 */
+.b3-typography kbd,
+.protyle-wysiwyg kbd {
+	display: inline-flex;
+	padding: 2px 2px 2px 2px;
+	margin: 5px 5px 5px 5px;
+	background-color: #000000;
+	box-shadow: 0 0 2px 2px #006391;
+	transform: translateY(-1.5px);
+}
+/* 键盘样式结束 */
