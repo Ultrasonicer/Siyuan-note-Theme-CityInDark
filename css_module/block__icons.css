@@ -6,4 +6,9 @@
 .block__icons--active {
 	display: flex;
 }
+
+.block__popover--move > .block__icons {
+	display: flex; /*弹出框的图标保持在弹出框内*/
+}
+
 /* 隐藏非激活状态的图标结束 */
