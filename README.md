@@ -11,7 +11,7 @@ A dark theme of [SiYuan Note](https://github.com/siyuan-note/siyuan).
 
 ### 手动安装
 
-在 [Releases](https://github.com/Zuoqiu-Yingyi/siyuan-theme-dark-plus/releases) 中下载发行包, 解压后放到思源笔记 `<工作空间>/conf/appearance/themes/` 目录下
+在 [Releases](https://github.com/weihan-Chen/CityInDark/releases) 中下载发行包, 解压后放到思源笔记 `<工作空间>/conf/appearance/themes/` 目录下
 
 ## START
 
