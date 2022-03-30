@@ -31,6 +31,7 @@
 /* 面板 */
 @import url(css_module/layout__resize--lr.css);
 @import url(css_module/b3-list.css);
+@import url(css_module/block__icons.css);
 /* 行内元素 */
 @import url(css_module/inline-blockref.css);
 @import url(css_module/inline-tag.css);
