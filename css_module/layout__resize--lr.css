@@ -2,5 +2,6 @@
 .layout__resize--lr {
 	width: 10px;
 	background-color: #000000;
+	border-radius: 10px;
 }
 /* 分隔线结束 */
