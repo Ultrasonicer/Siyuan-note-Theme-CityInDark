@@ -108,4 +108,10 @@
 }
 /* 标题颜色标识结束 */
 
+.protyle-wysiwyg div[fold="1"][data-type="NodeHeading"]{
+	background-color: #3d352b;
+}
+.protyle-wysiwyg div[fold="1"][data-type="NodeHeading"]::after{
+	content: "……";
+}
 /* 标题样式结束 */

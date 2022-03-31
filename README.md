@@ -22,3 +22,7 @@ The theme has been put on the shelves at [SiYuan community bazaar](https://githu
 ### MANUAL INSTALL
 
 Download the release package in [Releases](https://github.com/weihan-Chen/CityInDark/releases), unzip it and place it in the `<workspace>/conf/appearance/themes/` directory of SiYuan Note.
+
+## 注意
+
+本主题为极简简洁风格，部分图标和面板选项需要点击相应面板区域激活显示，请知悉。
