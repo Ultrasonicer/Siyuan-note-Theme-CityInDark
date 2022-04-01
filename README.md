@@ -26,3 +26,7 @@ Download the release package in [Releases](https://github.com/weihan-Chen/CityIn
 ## 注意
 
 本主题为极简简洁风格，部分图标和面板选项需要点击相应面板区域激活显示，请知悉。
+
+## change log
+
+[版本日志](https://github.com/weihan-Chen/CityInDark/blob/main/CHANGELOG.md)
