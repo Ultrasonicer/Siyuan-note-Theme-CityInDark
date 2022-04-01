@@ -11,11 +11,11 @@
 	--b3-theme-error: #d23f31;
 
 	/* 文字颜色 */
-	--b3-theme-on-primary: #ffffff;
-	--b3-theme-on-secondary: #adadad;
-	--b3-theme-on-background: #ffffff;
-	--b3-theme-on-surface: #fff7cd;
-	--b3-theme-on-error: #ffffff;
+    --b3-theme-on-primary: #fff;
+    --b3-theme-on-secondary: #fff;
+    --b3-theme-on-background: #c9d1d9;
+    --b3-theme-on-surface: #9aa0a6;
+    --b3-theme-on-error: #fff;
 
 	/* 字体 */
 	--b3-font-family: 'HarmonyOS', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Win11 Emoji', 'Segoe UI Symbol', 'Android Emoji', 'EmojiSymbols';
