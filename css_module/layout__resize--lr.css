@@ -1,7 +1,7 @@
 /* 分隔线 */
 .layout__resize--lr {
-	width: 10px;
-	background-color: #1e1e1e;
-	border-radius: 10px;
-}
+    cursor: col-resize;
+    width: 10px;
+    height: auto;
 /* 分隔线结束 */
+}

@@ -1,9 +1,9 @@
 /* 工具栏样式 */
 /* 隐藏工具栏,鼠标移入显示 *
-.toolbar__item svg {
+.b3-tooltips {
 	height: 0px;
 }
-.toolbar__item:hover svg {
+.b3-tooltips:hover {
 	height: 24px;
 }
 

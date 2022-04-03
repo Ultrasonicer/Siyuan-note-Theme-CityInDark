@@ -2,6 +2,7 @@
 
 /* 导入全局方案 */
 @import url(css_module/base.css);
+@import url(css_module/background.css);
 /* 块级元素 */
 @import url(css_module/table.css);
 @import url(css_module/NodeBlockQueryEmbed.css);
