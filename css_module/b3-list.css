@@ -1,6 +1,6 @@
 /* 引用备选列表样式 */
 .b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
-	background-color: #7e940073;
+	background-color: #0099ff73;
 	border-radius: 15px;
 }
 /* 引用备选列表样式结束 */

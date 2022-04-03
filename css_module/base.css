@@ -1,9 +1,9 @@
 :root {
 	/* 主色 */
-	--b3-theme-primary: #ffd400;
-	--b3-theme-primary-light: #b29400;
-	--b3-theme-primary-lighter: #7e6900;
-	--b3-theme-primary-lightest: #352d00;
+	--b3-theme-primary: #22BCF2;
+	--b3-theme-primary-light: #2A74DB;
+	--b3-theme-primary-lighter: #1e6661;
+	--b3-theme-primary-lightest: #2b2e4996;
 	--b3-theme-secondary: #fff7cd;
 	--b3-theme-background: #1e1e1e;
 	--b3-theme-background-light: #1e1e1e;
@@ -29,18 +29,18 @@
 	--b3-border-color: #1e1e1e;
 
 	/* 滚动条 */
-	--b3-scroll-color: #4b3e00;
+	--b3-scroll-color: #25294e5b;
 
 	/* 列表 */
 	--b3-list-hover: rgba(230, 230, 230, 0.05);
 
 	/* 页签 */
 	--b3-tab-background: #0b0c0d;
-	--b3-tab-background-hover: #4b3e00;
+	--b3-tab-background-hover: #25294e;
 	/* 菜单 */
 	--b3-menu-background: #0b0c0d;
 	/* 提示 */
-	--b3-tooltips-color: #b29400;
+	--b3-tooltips-color: #0067ac;
 
 	/* 卡片背景 */
 	--b3-card-error-color: rgb(243, 153, 147);
@@ -145,8 +145,8 @@
 	--b3-protyle-inline-tag-color: #f8f9fa;
 	--b3-protyle-inline-code-color: #b9bcbc;
 	--b3-protyle-inline-code-background: #225764;
-	--b3-protyle-inline-blockref-color: #ffd400;
-	--b3-protyle-inline-blockref-hover-color: #ffd400;
+	--b3-protyle-inline-blockref-color: #31c8ff;
+	--b3-protyle-inline-blockref-hover-color: #22BCF2;
 	--blockquote-border-color: #6d9a9a;
 	/* 表格 */
 	--b3-table-border-color: #313d49;
@@ -154,17 +154,17 @@
 	--b3-table-trn-color: #222d38;
 	--b3-table-tr2n-color: #1a2734;
 	/* 高亮 */
-	--b3-menu-highlight-color: #13c2c2f1;
-	--b3-menu-highlight-focus-color: #13c2c2f1;
+	--b3-menu-highlight-color: #2b6969f1;
+	--b3-menu-highlight-focus-color: #2b6969f1;
 	/* 文件树背景高亮颜色 */
 	--b3-menu-highlight-background: #293241;
 	--b3-tab-custom-background: #19232c;
 
 	/* 标题颜色 */
 	--custom-h1-color: #f8f9fa;
-	--custom-h2-color: #d8d800;
-	--custom-h3-color: #d1d11d;
-	--custom-h4-color: #d4d442;
-	--custom-h5-color: #cece62;
-	--custom-h6-color: #cccc8d;
+	--custom-h2-color: #0070c0;
+	--custom-h3-color: #0064ac;
+	--custom-h4-color: #004b81;
+	--custom-h5-color: #4c728d;
+	--custom-h6-color: #768794;
 }
