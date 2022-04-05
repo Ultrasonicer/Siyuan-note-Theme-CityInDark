@@ -1,5 +1,5 @@
 /* 隐藏非激活状态的图标 */
-.block__icons {
+/*.block__icons {
 	display: none;
 }
 
@@ -7,8 +7,11 @@
 	display: flex;
 }
 
+.backlinkList.fn__flex-1:hover + .block__icons {
+	display: flex;
+}
+
 .block__popover--move > .block__icons {
 	display: flex; /*弹出框的图标保持在弹出框内*/
-}
 
 /* 隐藏非激活状态的图标结束 */
