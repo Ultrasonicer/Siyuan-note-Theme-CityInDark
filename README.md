@@ -25,7 +25,7 @@ Download the release package in [Releases](https://github.com/weihan-Chen/CityIn
 
 ## 注意
 
-本主题为极简简洁风格，部分图标和面板选项需要点击相应面板区域激活显示，请知悉。
+本主题默认添加了看板娘，如需取消请删除 theme.js 相关片段。
 
 ## change log
 
