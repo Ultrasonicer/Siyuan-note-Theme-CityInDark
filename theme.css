@@ -32,7 +32,7 @@
 /* 面板 */
 @import url(css_module/layout__resize--lr.css);
 @import url(css_module/b3-list.css);
-@import url(css_module/block__icons.css);
+@import url(css_module/backlinks.css);
 @import url(css_module/search_box.css);
 /* 行内元素 */
 @import url(css_module/inline-blockref.css);

@@ -1,0 +1,4 @@
+.b3-list-item[data-treetype='backlink'][data-type='NodeDocument'] {
+	background-color: rgba(1, 1, 2, 0.2) !important;
+	border-radius: 10px;
+}
