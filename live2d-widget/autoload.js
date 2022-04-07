@@ -1,15 +1,6 @@
-/*function loadScript(url, type = 'module') {
-	let script = document.createElement('script');
-	script.setAttribute('type', type);
-	script.setAttribute('src', url);
-	document.head.appendChild(script);
-	script.style;
-}
-loadScript('/live2d-widget/autoload.js');*/
-
 // 注意：live2d_path 参数应使用绝对路径
 //const live2d_path = 'https://cdn.jsdelivr.net/gh/weihan-Chen/live2d-widget@latest/';
-const live2d_path = 'appearance/themes/CityInDark/live2d-widget/';
+const live2d_path = "/live2d-widget/";
 
 // 封装异步加载资源的方法
 function loadExternalResource(url, type) {
