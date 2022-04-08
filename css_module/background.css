@@ -18,7 +18,8 @@ body.body--win32 {
 .b3-menu__item,
 .b3-menu__item--show,
 .b3-menu__submenu,
-.dock {
+.dock,
+.protyle-toolbar {
 	background-color: transparent;
 	background-image: url(../src/background.jpg);
 	background-repeat: no-repeat;
