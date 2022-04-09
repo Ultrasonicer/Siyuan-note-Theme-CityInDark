@@ -18,28 +18,18 @@ function loadWidget(config) {
 	}
 	localStorage.removeItem('waifu-display');
 	sessionStorage.removeItem('waifu-text');
-	/*document.body.insertAdjacentHTML(
-		'beforeend',
-		`<div id="waifu">
-			<div id="waifu-tips"></div>
-			<canvas id="live2d" width="300" height="300"></canvas>
-			<div id="waifu-tool">
-				<span class="fa fa-lg fa-comment"></span>
-				<span class="fa fa-lg fa-paper-plane"></span>
-				<span class="fa fa-lg fa-user-circle"></span>
-				<span class="fa fa-lg fa-street-view"></span>
-				<span class="fa fa-lg fa-camera-retro"></span>
-				<span class="fa fa-lg fa-info-circle"></span>
-				<span class="fa fa-lg fa-times">关闭</span>
-			</div>
-		</div>`
-	);*/
 	document.body.insertAdjacentHTML(
 		'beforeend',
 		`<div id="waifu">
 			<div id="waifu-tips"></div>
 			<canvas id="live2d" width="300" height="300"></canvas>
 			<div id="waifu-tool">
+				<span class="fa fa-lg fa-comment">评论</span>
+				<span class="fa fa-lg fa-paper-plane">飞机</span>
+				<span class="fa fa-lg fa-user-circle">角色</span>
+				<span class="fa fa-lg fa-street-view">换装</span>
+				<span class="fa fa-lg fa-camera-retro">拍照</span>
+				<span class="fa fa-lg fa-info-circle">更多</span>
 				<span class="fa fa-lg fa-times">关闭</span>
 			</div>
 		</div>`
@@ -72,7 +62,7 @@ function loadWidget(config) {
 	}, 1000);
 
 	(function registerEventListener() {
-		/*document.querySelector('#waifu-tool .fa-comment').addEventListener('click', showHitokoto);
+		document.querySelector('#waifu-tool .fa-comment').addEventListener('click', showHitokoto);
 		document.querySelector('#waifu-tool .fa-paper-plane').addEventListener('click', () => {
 			if (window.Asteroids) {
 				if (!window.ASTEROIDSPLAYERS) window.ASTEROIDSPLAYERS = [];
@@ -91,8 +81,8 @@ function loadWidget(config) {
 			Live2D.captureFrame = true;
 		});
 		document.querySelector('#waifu-tool .fa-info-circle').addEventListener('click', () => {
-			open('https://github.com/stevenjoezhang/live2d-widget');
-		});*/
+			open('https://github.com/weihan-Chen/live2d-widget');
+		});
 		document.querySelector('#waifu-tool .fa-times').addEventListener('click', () => {
 			localStorage.setItem('waifu-display', Date.now());
 			showMessage('愿你有一天能与重要的人重逢。', 2000, 11);

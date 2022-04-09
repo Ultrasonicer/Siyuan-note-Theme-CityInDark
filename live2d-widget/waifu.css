@@ -78,12 +78,14 @@
 }
 
 #waifu-tool {
-	color: rgb(160, 160, 160);
+	color: rgb(0, 0, 0);
 	opacity: 0;
 	position: absolute;
 	right: -10px;
 	top: 70px;
 	transition: opacity 1s;
+	border-radius: 15px;
+	background-color: rgba(142, 242, 255, 0.479);
 }
 
 #waifu:hover #waifu-tool {
@@ -91,14 +93,14 @@
 }
 
 #waifu-tool .fa-lg {
-	background-color: #7b8c9d;
 	cursor: pointer;
 	display: block;
-	height: 5px;
+	height: 30px;
 	width: 30px;
-	text-align: center;
-	/*border-radius: 15px;*/
-	/*transition: color 0.3s;*/
+	/* 字居中 */
+	line-height: 30px;
+	/*border-bottom: #0099cc solid 2px;*/
+	transition: color 0.3s;
 }
 
 @keyframes shake {
