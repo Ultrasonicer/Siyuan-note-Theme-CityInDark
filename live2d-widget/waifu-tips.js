@@ -46,7 +46,7 @@ function loadWidget(config) {
 	let userAction = false,
 		userActionTimer,
 		messageTimer,
-		messageArray = ['好久不见，日子过得好快呢……', '大坏蛋！你都多久没理人家了呀，嘤嘤嘤～', '嗨～快来逗我玩吧！', '拿小拳拳锤你胸口！'];
+		messageArray = ['好久不见，日子过得好快呢……', '大坏蛋！你都多久没理人家了呀，嘤嘤嘤～', '嗨～快来逗我玩吧！', '拿小拳拳锤你胸口！', '今天dailynote了吗~'];
 	window.addEventListener('mousemove', () => (userAction = true));
 	window.addEventListener('keydown', () => (userAction = true));
 	setInterval(() => {
@@ -228,7 +228,7 @@ function loadWidget(config) {
 			showMessage('我的新衣服好看嘛？', 4000, 10);
 		} else {
 			// 可选 "rand"(随机), "switch"(顺序)
-			fetch(`${apiPath}rand_textures/?id=${modelId}-${modelTexturesId}`)
+			fetch(`${apiPath}switch_textures/?id=${modelId}-${modelTexturesId}`)
 				.then((response) => response.json())
 				.then((result) => {
 					if (result.textures.id === 1 && (modelTexturesId === 1 || modelTexturesId === 0)) showMessage('我还没有其他衣服呢！', 4000, 10);

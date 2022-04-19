@@ -19,7 +19,9 @@ body.body--win32 {
 .b3-menu__item--show,
 .b3-menu__submenu,
 .dock,
-.protyle-toolbar {
+.protyle-toolbar,
+.inbox__details,
+.layout__empty {
 	background-color: transparent;
 	background-image: url(../src/background.jpg);
 	background-repeat: no-repeat;
