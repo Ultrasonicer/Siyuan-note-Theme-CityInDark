@@ -1,0 +1,112 @@
+{
+	"mouseover": [
+		{
+			"selector": "#live2d",
+			"text": ["干嘛呢你，快把手拿开～～", "鼠…鼠标放错地方了！", "你要干嘛呀？", "喵喵喵？", "怕怕(ノ≧∇≦)ノ", "非礼呀！救命！", "这样的话，只能使用武力了！", "我要生气了哦", "不要动手动脚的！", "真…真的是不知羞耻！", "Hentai！"]
+		},
+		{
+			"selector": "#waifu-tool .fa-times",
+			"text": ["到了要说再见的时候了吗？", "呜呜 QAQ 后会有期……", "不要抛弃我呀……", "我们，还能再见面吗……", "哼，你会后悔的！"]
+		},
+		{
+			"selector": ".container a[href^='http'], .nav-link .nav-text",
+			"text": ["要去看看 <span>{text}</span> 么？", "去 <span>{text}</span> 逛逛吧。", "到 <span>{text}</span> 看看吧。"]
+		},
+		{
+			"selector": ".protyle-title__input",
+			"text": ["这个是标题哦", "写一个好听的标题吧"]
+		},
+		{
+			"selector": ".toolbar__item[id=barDailyNote], .toolbar__item[id=barDailyNote]>svg",
+			"text": ["美好的一天，从写dailynote开始吧", "思源笔记推荐实践dailynote流程哦~"]
+		},
+		{
+			"selector": ".toolbar__item[id=barbarSearch], .toolbar__item[id=barSearch]>svg",
+			"text": ["从这里可以搜索到所有知识哦", "搜索一下吧", "想要了解什么呢？"]
+		},
+		{
+			"selector": ".toolbar__item[id=barThemeMode], .toolbar__item[id=barThemeMode]>svg",
+			"text": ["乾坤大挪移！", "换个颜色换个心情！"]
+		},
+		{
+			"selector": ".toolbar__item[id=barSync], .toolbar__item[id=barSync]>svg",
+			"text": ["你要走了吗", "要把资料同步到哪里去呀", "用这个可以同步资料到其他地方哦"]
+		},
+		{
+			"selector": ".toolbar__item[id=barMore], .toolbar__item[id=barMore]>svg",
+			"text": ["这里有所有的设置哦", "去看看有没有你需要的设置吧", "这里有很多设置哦", ""]
+		},
+		{
+			"selector": "protyle-breadcrumb",
+			"text": ["这里是面包屑，可以定位你在文档中的位置"]
+		}
+	],
+	"click": [
+		{
+			"selector": "#live2d",
+			"text": ["是…是不小心碰到了吧…", "萝莉控是什么呀？", "你看到我的小熊了吗？", "再摸的话我可要报警了！⌇●﹏●⌇", "110 吗，这里有个变态一直在摸我(ó﹏ò｡)", "不要摸我了，我会告诉老婆来打你的！", "干嘛动我呀！小心我咬你！", "别摸我，有什么好摸的！"]
+		},
+		{
+			"selector": ".veditor",
+			"text": ["要吐槽些什么呢？", "一定要认真填写喵～", "有什么想说的吗？"]
+		},
+		{
+			"selector": ".vsubmit",
+			"text": ["输入验证码就可以提交评论啦～"]
+		},
+		{
+			"selector": ".b3-typography p, .b3-typography [data-node-id], .protyle-wysiwyg p, .protyle-wysiwyg [data-node-id]",
+			"text": ["要写些什么呢"]
+		}
+	],
+	"seasons": [
+		{
+			"date": "01/01",
+			"text": "<span>元旦</span>了呢，新的一年又开始了，今年是{year}年～"
+		},
+		{
+			"date": "02/14",
+			"text": "又是一年<span>情人节</span>，{year}年找到对象了嘛～"
+		},
+		{
+			"date": "03/08",
+			"text": "今天是<span>国际妇女节</span>！"
+		},
+		{
+			"date": "03/12",
+			"text": "今天是<span>植树节</span>，要保护环境呀！"
+		},
+		{
+			"date": "04/01",
+			"text": "悄悄告诉你一个秘密～<span>今天是愚人节，不要被骗了哦～</span>"
+		},
+		{
+			"date": "05/01",
+			"text": "今天是<span>五一劳动节</span>，计划好假期去哪里了吗～"
+		},
+		{
+			"date": "06/01",
+			"text": "<span>儿童节</span>了呢，快活的时光总是短暂，要是永远长不大该多好啊…"
+		},
+		{
+			"date": "09/03",
+			"text": "<span>中国人民抗日战争胜利纪念日</span>，铭记历史、缅怀先烈、珍爱和平、开创未来。"
+		},
+		{
+			"date": "09/10",
+			"text": "<span>教师节</span>，在学校要给老师问声好呀～"
+		},
+		{
+			"date": "10/01",
+			"text": "<span>国庆节</span>到了，为祖国母亲庆生！"
+		},
+		{
+			"date": "11/05-11/12",
+			"text": "今年的<span>双十一</span>是和谁一起过的呢～"
+		},
+		{
+			"date": "12/20-12/31",
+			"text": "这几天是<span>圣诞节</span>，主人肯定又去剁手买买买了～"
+		}
+	]
+}

@@ -3,12 +3,12 @@
 /*放大ctrl+p窗口尺寸*/
 /*不添加[data-key]属性选择器将会同时影响alt+p窗口*/
 body > div[data-key] > .b3-dialog > .b3-dialog__container {
-	width: 95vw !important;
+	width: 80vw !important;
 }
 
 body > div[data-key] > .b3-dialog > .b3-dialog__container > div > .fn__flex > .fn__flex-column {
-	height: 95vh !important;
-	width: 95vw !important;
+	height: 80vh !important;
+	width: 80vw !important;
 }
 
 /*ctrl+p改造成左右排列*/
