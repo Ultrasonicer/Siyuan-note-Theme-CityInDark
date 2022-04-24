@@ -14,3 +14,5 @@ window.theme.loadScript('appearance/themes/CityInDark/app_module/live2d-widget/a
 // 加载窗口资源
 window.theme.loadScript('appearance/themes/CityInDark/js_module/module/window.js');
 window.theme.loadScript('appearance/themes/CityInDark/js_module/module/html.js', 'text/javascript');
+// 加载打字机功能
+window.theme.loadScript('/appearance/themes/CItyInDark/js_module/module/typewriter.js');
