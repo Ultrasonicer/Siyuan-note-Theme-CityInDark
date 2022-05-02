@@ -24,6 +24,7 @@ body.body--win32 {
 .layout__empty {
 	background-color: transparent;
 	background-image: url(../src/background.jpg);
+	/*background-color: #1e1e1e;*/
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
