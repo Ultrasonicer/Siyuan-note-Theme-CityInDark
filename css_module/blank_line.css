@@ -1,9 +1,9 @@
-.protyle-wysiwyg [data-node-id]:not(.code-block) > [spellcheck='false']:focus:empty:after {
+.protyle-wysiwyg [data-node-id]:not(.code-block) > [contenteditable][spellcheck]:empty::after {
 	content: 'knowledge sparks here~' !important;
-	color: var(--b3-font-color-empty);
+	color: #dafbff7c;
 }
 
-.protyle-wysiwyg [data-node-id] [spellcheck='false']:empty:after {
+.protyle-wysiwyg [data-node-id] [spellcheck='false']:empty::after {
 	color: inherit;
 	opacity: 0.5;
 }
@@ -11,11 +11,11 @@
 /* 空列表出现提示 */
 .protyle-wysiwyg [data-subtype='t'] > .li > .p:nth-of-type(2) > [spellcheck='false']:empty:after {
 	content: '待办事项';
-	color: var(--b3-font-color-empty);
+	color: #dafbff7c;
 }
 
 .protyle-wysiwyg [data-subtype='u'] > .li > .p:nth-of-type(2) > [spellcheck='false']:empty:after,
 .protyle-wysiwyg [data-subtype='o'] > .li > .p:nth-of-type(2) > [spellcheck='false']:empty:after {
 	content: '列表';
-	color: var(--b3-font-color-empty);
+	color: #dafbff7c;
 }

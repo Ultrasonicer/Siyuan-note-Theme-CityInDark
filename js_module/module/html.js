@@ -57,7 +57,21 @@ window.theme.openNewWindow = function (
     closeCallback = null,
 ) {
     try {
+        // 优化思源内部 URL
+        switch (true) {
+            case url.startsWith('/'):
+                url = `${window.location.origin}${url}`;
+                break;
+            case url.startsWith('assets/'):
+            case url.startsWith('widgets/'):
+            case url.startsWith('emojie/'):
+            case url.startsWith('export/'):
+            case url.startsWith('appearance/'):
+                url = `${window.location.origin}/${url}`;
+                break;
+        }
         url = new URL(url);
+
         // 设置窗口模式
         if (mode) {
             switch (mode.toLowerCase()) {
@@ -67,10 +81,7 @@ window.theme.openNewWindow = function (
                 case 'mobile':
                     url.pathname = `/stage/build/${mode.toLowerCase()}/`;
                     break;
-                case 'localfile':
-                    url.pathname = `/${url.pathname}/conf/${pathname}index.html`.replaceAll('//', '/');
-                    // url.protocol = 'file:';
-                    pathname = null;
+                case 'editor':
                     break;
                 default:
                     break;
@@ -86,7 +97,7 @@ window.theme.openNewWindow = function (
         try {
             const { BrowserWindow } = require('@electron/remote');
             // 新建窗口(Electron 环境)
-            newWin = new BrowserWindow(windowParams)
+            var newWin = new BrowserWindow(windowParams);
 
             console.log(url.href);
             // if (url.protocol === 'file:') newWin.loadFile(url.href.substr(8));
@@ -96,6 +107,18 @@ window.theme.openNewWindow = function (
             newWin.webContents.on('console-message', (event, level, message, line, sourceId) => {
                 consoleMessageCallback && setTimeout(async () => consoleMessageCallback(newWin, event, level, message, line, sourceId));
             });
+            if (mode) {
+                switch (mode.toLowerCase()) {
+                    case 'editor':
+                        newWin.removeMenu(); // 移除编辑器的菜单栏
+                        break;
+                    case 'app':
+                    case 'desktop':
+                    case 'mobile':
+                    default:
+                        break;
+                }
+            }
             newWin.on('closed', () => {
                 closeCallback && setTimeout(async () => closeCallback(newWin), 0);
                 newWin = null;

@@ -6,6 +6,7 @@ export {
     blockMenuInit, // 右键菜单初始化
     CommonMenuObserver, // 右键菜单管理
 };
+
 import {
     config,
     custom,
@@ -47,9 +48,11 @@ function toolbarItemListPush(item) {
     if (window.theme.clientMode !== 'mobile' && toolbar && referenceNode) {
         toolbarItemList = toolbarItemList.sort((a, b) => a.index - b.index);
         for (let item of toolbarItemList) {
-            let node = document.getElementById(item.id);
-            if (node) toolbar.insertBefore(node, referenceNode);
-            else toolbar.insertBefore(item.node, referenceNode);
+            if (item.display) {
+                let node = document.getElementById(item.id);
+                if (node) toolbar.insertBefore(node, referenceNode);
+                else toolbar.insertBefore(item.node, referenceNode);
+            }
         }
     }
 
@@ -87,6 +90,7 @@ function toolbarItemInsert(toolbarConfig) {
     // let referenceNode = document.getElementById('windowControls');
     // return toolbar.insertBefore(node.firstElementChild, referenceNode);
     toolbarItemListPush({
+        display: toolbarConfig.display,
         index: toolbarConfig.index,
         id: toolbarConfig.id,
         node: node,

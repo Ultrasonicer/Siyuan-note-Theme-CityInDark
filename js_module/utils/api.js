@@ -25,6 +25,7 @@ export {
     以id获取文档内容 as getDoc,
     以id获取文档聚焦内容 as getFocusedDoc,
     以id获取文档块markdown as exportMdContent,
+    以id获取文档大纲 as getDocOutline,
 
     以id获取思源块属性 as getBlockAttrs,
     设置思源块属性 as setBlockAttrs,
@@ -34,6 +35,7 @@ export {
     以id获取反向链接 as getBacklink,
     以sql获取嵌入块内容 as searchEmbedBlock,
     获取标签列表 as getTag,
+    导出模板 as docSaveAsTemplate,
     渲染模板 as render,
 
     以id获取局部图谱 as getLocalGraph,
@@ -243,6 +245,14 @@ async function 以id获取文档块markdown(文档id) {
     //文档hepath与Markdown 内容
 }
 
+async function 以id获取文档大纲(文档id) {
+    let data = {
+        id: 文档id,
+    }
+    let url = '/api/outline/getDocOutline'
+    return 解析响应体(向思源请求数据(url, data))
+}
+
 async function 列出指定路径下文档(路径) {
     let data = {
         path: 路径,
@@ -355,6 +365,15 @@ async function 通过markdown创建文档(notebook, path, markdown) {
         markdown: markdown,
     }
     let url = '/api/filetree/createDocWithMd'
+    return 解析响应体(向思源请求数据(url, data))
+}
+
+async function 导出模板(id, overwrite = false) {
+    let url = '/api/template/docSaveAsTemplate'
+    let data = {
+        id: id,
+        overwrite: overwrite,
+    }
     return 解析响应体(向思源请求数据(url, data))
 }
 

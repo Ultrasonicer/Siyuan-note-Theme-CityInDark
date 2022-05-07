@@ -17,9 +17,11 @@ export var config = {
 			id: /^\d{14}\-[0-9a-z]{7}$/, // 块 ID 正则表达式
 			fontsize: /(?<=\.b3-typography|protyle-wysiwyg|protyle-title\s*\{\s*font-size\s*:\s*)(\d+)(?=px(?:\s+\!important)?(?:\s*;|\}))/,
 			winpath: /^\/\w\:\/.*$/, // Windows 路径正则表达式
+			inboxid: /^\d{13}$/, // 收集箱 ID 正则表达式
 		},
 		goto: {
 			enable: true, // 是否启用使用 URL 参数跳转指定块功能
+			delay: 250, // 延迟时间，单位毫秒
 		},
 		style: {
 			enable: true, // 是否启用自定义样式渲染
@@ -31,6 +33,7 @@ export var config = {
 				toolbar: {
 					// 菜单栏
 					enable: true,
+					display: true,
 					id: 'toolbar-theme-style-guides',
 					hotkey: () => config.theme.hotkeys.style.guides,
 					label: {
@@ -50,7 +53,7 @@ export var config = {
 						enable: true,
 						style: {
 							id: 'theme-style-guides-elements-list-style',
-							href: '/appearance/themes/CItyInDark/style/dynamic-module/guides-list.css', // 样式文件 URL
+							href: '/appearance/themes/Dark+/style/dynamic-module/guides-list.css', // 样式文件 URL
 						},
 					},
 				},
@@ -60,6 +63,7 @@ export var config = {
 				toolbar: {
 					// 菜单栏
 					enable: true,
+					display: true,
 					id: 'toolbar-theme-style-render',
 					hotkey: () => config.theme.hotkeys.style.render,
 					label: {
@@ -105,6 +109,7 @@ export var config = {
 				toolbar: {
 					// 菜单栏
 					enable: true,
+					display: true,
 					id: 'toolbar-theme-reload-window',
 					hotkey: () => config.theme.hotkeys.reload.window,
 					label: {
@@ -126,11 +131,17 @@ export var config = {
 			enable: true, // 是否启用文档扩展功能
 			outline: {
 				enable: true, // 是否启用当前文档大纲复制功能
+				ial: {
+					// 列表块属性, 用于设置渲染样式, 为空则为默认样式
+					// 'custom-type': 'map', // 脑图视图
+					// 'custom-type': 'table', // 表格视图
+				},
 				u: {
 					enable: true, // 无序列表
 					toolbar: {
 						// 菜单栏
 						enable: true,
+						display: true,
 						id: 'toolbar-theme-doc-outline-u',
 						hotkey: () => config.theme.hotkeys.doc.outline.u,
 						label: {
@@ -149,6 +160,7 @@ export var config = {
 					toolbar: {
 						// 菜单栏
 						enable: true,
+						display: true,
 						id: 'toolbar-theme-doc-outline-o',
 						hotkey: () => config.theme.hotkeys.doc.outline.o,
 						label: {
@@ -167,6 +179,7 @@ export var config = {
 					toolbar: {
 						// 菜单栏
 						enable: true,
+						display: true,
 						id: 'toolbar-theme-doc-outline-t',
 						hotkey: () => config.theme.hotkeys.doc.outline.t,
 						label: {
@@ -184,17 +197,19 @@ export var config = {
 					// 大纲样式
 					content: 'link', // 内容样式('text': 文本, 'link': 链接, 'ref': 块引用)
 				},
-				headline: {
+				heading: {
 					enable: false, // 是否在列表中添加标题级别标志
 					handler: (level, enable) => (enable ? `${'#'.repeat(level)} ` : ''),
 				},
 				top: 'h', // 大纲最顶层块类型('d': 文档块, 'h': 标题块)
+				empty: '-', // 大纲空块显示内容
 			},
 			copy: {
 				enable: true, // 是否启用当前文档全文复制功能
 				toolbar: {
 					// 菜单栏
 					enable: true,
+					display: true,
 					id: 'toolbar-theme-doc-copy',
 					hotkey: () => config.theme.hotkeys.doc.copy,
 					label: {
@@ -213,6 +228,7 @@ export var config = {
 				toolbar: {
 					// 菜单栏
 					enable: false,
+					display: true,
 					id: 'toolbar-theme-doc-delete',
 					hotkey: () => config.theme.hotkeys.doc.delete,
 					label: {
@@ -231,6 +247,7 @@ export var config = {
 				toolbar: {
 					// 菜单栏
 					enable: false,
+					display: true,
 					id: 'toolbar-theme-doc-cut',
 					hotkey: () => config.theme.hotkeys.doc.cut,
 					label: {
@@ -253,6 +270,7 @@ export var config = {
 				toolbar: {
 					// 菜单栏
 					enable: true,
+					display: true,
 					id: 'toolbar-theme-typewriter-switch',
 					hotkey: () => config.theme.hotkeys.typewriter.switch,
 					label: {
@@ -281,6 +299,7 @@ export var config = {
 			toolbar: {
 				// 菜单栏
 				enable: true,
+				display: true,
 				id: 'toolbar-theme-invert',
 				hotkey: () => config.theme.hotkeys.invert,
 				label: {
@@ -339,6 +358,7 @@ export var config = {
 					toolbar: {
 						// 菜单栏
 						enable: true,
+						display: true,
 						id: 'toolbar-theme-background-image-web',
 						hotkey: () => config.theme.hotkeys.background.image.web,
 						label: {
@@ -371,6 +391,7 @@ export var config = {
 					toolbar: {
 						// 菜单栏
 						enable: true,
+						display: true,
 						id: 'toolbar-theme-background-image-custom',
 						hotkey: () => config.theme.hotkeys.background.image.custom,
 						label: {
@@ -387,27 +408,27 @@ export var config = {
 					default: false, // 是否默认使用自定义背景图片
 					light: [
 						// 自定义亮色背景图片 URL 列表
-						'/appearance/themes/CItyInDark/image/light/background (01).jpeg',
-						'/appearance/themes/CItyInDark/image/light/background (02).jpeg',
-						'/appearance/themes/CItyInDark/image/light/background (03).jpeg',
-						'/appearance/themes/CItyInDark/image/light/background (04).jpeg',
-						'/appearance/themes/CItyInDark/image/light/background (05).jpeg',
-						'/appearance/themes/CItyInDark/image/light/background (06).jpeg',
+						'/appearance/themes/Dark+/image/light/background (01).jpeg',
+						'/appearance/themes/Dark+/image/light/background (02).jpeg',
+						'/appearance/themes/Dark+/image/light/background (03).jpeg',
+						'/appearance/themes/Dark+/image/light/background (04).jpeg',
+						'/appearance/themes/Dark+/image/light/background (05).jpeg',
+						'/appearance/themes/Dark+/image/light/background (06).jpeg',
 					],
 					dark: [
 						// 自定义暗色背景图片 URL 列表
-						'/appearance/themes/CItyInDark/image/background (01).jpg',
-						'/appearance/themes/CItyInDark/image/background (02).jpg',
-						'/appearance/themes/CItyInDark/image/background (03).jpg',
-						'/appearance/themes/CItyInDark/image/background (04).jpg',
-						'/appearance/themes/CItyInDark/image/background (05).jpg',
-						'/appearance/themes/CItyInDark/image/background (06).jpg',
-						'/appearance/themes/CItyInDark/image/background (07).jpg',
-						'/appearance/themes/CItyInDark/image/background (08).jpg',
-						'/appearance/themes/CItyInDark/image/background (09).jpg',
-						'/appearance/themes/CItyInDark/image/background (10).jpg',
-						'/appearance/themes/CItyInDark/image/background (11).jpg',
-						'/appearance/themes/CItyInDark/image/background (12).jpg',
+						'/appearance/themes/Dark+/image/background (01).jpg',
+						'/appearance/themes/Dark+/image/background (02).jpg',
+						'/appearance/themes/Dark+/image/background (03).jpg',
+						'/appearance/themes/Dark+/image/background (04).jpg',
+						'/appearance/themes/Dark+/image/background (05).jpg',
+						'/appearance/themes/Dark+/image/background (06).jpg',
+						'/appearance/themes/Dark+/image/background (07).jpg',
+						'/appearance/themes/Dark+/image/background (08).jpg',
+						'/appearance/themes/Dark+/image/background (09).jpg',
+						'/appearance/themes/Dark+/image/background (10).jpg',
+						'/appearance/themes/Dark+/image/background (11).jpg',
+						'/appearance/themes/Dark+/image/background (12).jpg',
 					],
 				},
 			},
@@ -424,9 +445,15 @@ export var config = {
 					fullscreen: false, // 是否全屏显示
 					alwaysOnTop: true, // 是否置顶显示
 					autoHideMenuBar: true, // 是否隐藏菜单栏(使用 Alt 显示)
+					// backgroundColor: window.siyuan.config.appearance.mode // 窗口默认背景色
+					//     ? '#1e1e1e'
+					//     : '#f5f5f5',
 					webPreferences: {
+						// nodeIntegration: true, // 是否启用 Node.js 内置模块
+						// nativeWindowOpen: true,
+						// webviewTag: true,
 						webSecurity: false, // 是否启用 Web 安全
-						nodeIntegration: true, // 是否启用 Node.js 内置模块
+						// contextIsolation: false,
 						// defaultFontFamily: { // 默认字体
 						//     standard: window.siyuan.config.editor.fontFamily,
 						// },
@@ -438,6 +465,7 @@ export var config = {
 					toolbar: {
 						// 菜单栏
 						enable: true,
+						display: true,
 						id: 'toolbar-theme-window-open-panel',
 						label: {
 							zh_CN: '打开一个新窗口',
@@ -460,6 +488,7 @@ export var config = {
 						toolbar: {
 							// 菜单栏
 							enable: true,
+							display: true,
 							id: 'toolbar-theme-window-open-block-outfocus',
 							hotkey: () => config.theme.hotkeys.window.open.block.outfocus,
 							label: {
@@ -479,6 +508,7 @@ export var config = {
 						toolbar: {
 							// 菜单栏
 							enable: true,
+							display: true,
 							id: 'toolbar-theme-window-open-block-infocus',
 							hotkey: () => config.theme.hotkeys.window.open.block.infocus,
 							label: {
@@ -504,6 +534,9 @@ export var config = {
 				},
 				editor: {
 					enable: true, // 启用新窗口打开当编辑器
+					doc: {
+						type: 'std', // 文档编辑类型, 'std': 标准 Markdown, 'kramdown': Kramdown
+					},
 					labels: {
 						openFile: { zh_CN: '打开文件', other: 'Open File' },
 						open: { zh_CN: '打开', other: 'Open' },
@@ -529,6 +562,58 @@ export var config = {
 				max: 72, // 最大字号(px)
 			},
 		},
+		location: {
+			enable: true, // 浏览位置开关
+			slider: {
+				enable: true, // 滑块功能开关
+				follow: {
+					enable: true, // 滑块跟随焦点开关
+				},
+				goto: {
+					enable: true, // 滑块跳转浏览位置功能开关
+				},
+			},
+			record: {
+				enable: true, // 记录浏览位置开关
+				mode: 2, // 记录模式, 1: 记录至 custom.json, 2: 记录至文档块属性
+				attribute: 'custom-location', // 记录浏览位置的块属性名
+				toolbar: {
+					// 菜单栏
+					enable: true,
+					display: true,
+					id: 'toolbar-theme-location-record',
+					hotkey: () => config.theme.hotkeys.location.record,
+					label: {
+						zh_CN: '记录浏览位置',
+						zh_CNT: null,
+						fr_FR: null,
+						en_US: null,
+						other: 'Record Browsing Location',
+					},
+					icon: '#iconBookmark',
+					index: -5,
+				},
+			},
+			clear: {
+				enable: true, // 清除浏览位置按钮
+				toolbar: {
+					// 菜单栏
+					enable: true,
+					display: true,
+					id: 'toolbar-theme-location-clear',
+					hotkey: () => config.theme.hotkeys.location.clear,
+					label: {
+						zh_CN: '清除当前文档浏览位置记录',
+						zh_CNT: null,
+						fr_FR: null,
+						en_US: null,
+						other: 'Clear the Current Document Browsing Location History',
+					},
+					icon: '#iconTrashcan',
+					index: 13,
+				},
+			},
+		},
 		menu: {
 			enable: true, // 菜单功能开关
 			block: {
@@ -536,6 +621,7 @@ export var config = {
 				toolbar: {
 					// 菜单栏
 					enable: true,
+					display: true,
 					id: 'toolbar-theme-menu-block',
 					hotkey: () => config.theme.hotkeys.menu.block,
 					label: {
@@ -880,7 +966,7 @@ export var config = {
 									},
 								},
 								mode: 'button',
-								icon: '#iconScrollWrapped',
+								icon: '#iconMark',
 								label: {
 									zh_CN: '显示标记文本',
 									other: 'Display Marked Text',
@@ -931,12 +1017,12 @@ export var config = {
 									},
 								},
 								mode: 'button',
-								icon: '#iconScrollWrapped',
+								icon: '#iconInsertColumn',
 								label: {
-									zh_CN: '显示标记文本',
-									other: 'Display Marked Text',
+									zh_CN: '切换书写模式',
+									other: 'Toggle Writing Modes',
 								},
-								accelerator: 'mark: display',
+								accelerator: 'writing-mode',
 								click: {
 									enable: true,
 									callback: null,
@@ -944,7 +1030,7 @@ export var config = {
 										{
 											type: 'attr-switch',
 											params: {
-												'custom-mark': ['display', null],
+												'custom-writing-mode': ['vertical-rl', 'vertical-lr', 'sideways-rl', 'sideways-lr', null],
 											},
 										},
 									],
@@ -1046,6 +1132,42 @@ export var config = {
 											type: 'attr-switch',
 											params: {
 												'custom-auto-num-t': ['表', '表格', 'Tab.', 'table', 'Table', 'TABLE', null],
+											},
+										},
+									],
+								},
+							},
+							{
+								enable: true,
+								type: {
+									NodeDocument: {
+										enable: true,
+									},
+								},
+								mode: 'separator',
+							},
+							{
+								enable: true,
+								type: {
+									NodeDocument: {
+										enable: true,
+									},
+								},
+								mode: 'button',
+								icon: '#iconTrashcan',
+								label: {
+									zh_CN: '清除浏览位置记录',
+									other: 'Clear Browsing Location History',
+								},
+								accelerator: 'location: null',
+								click: {
+									enable: true,
+									callback: null,
+									tasks: [
+										{
+											type: 'attr-update', // 覆盖属性值
+											params: {
+												'custom-location': null,
 											},
 										},
 									],
@@ -1671,16 +1793,6 @@ export var config = {
 					},
 				},
 			},
-			menu: {
-				block: {
-					// 块菜单开关(Shift + Alt + M)
-					CtrlCmd: false,
-					WinCtrl: false,
-					Shift: true,
-					Alt: true,
-					key: 'M',
-				},
-			},
 			wheel: {
 				zoom: {
 					// 鼠标滚轮缩放(Ctrl + wheel)
@@ -1691,6 +1803,44 @@ export var config = {
 					type: 'mousewheel',
 				},
 			},
+			location: {
+				slider: {
+					goto: {
+						// 跳转到上次浏览位置(鼠标右键单击块滚动条)
+						CtrlCmd: false,
+						WinCtrl: false,
+						Shift: false,
+						Alt: false,
+						button: 2, // 鼠标右键
+					},
+				},
+				record: {
+					// 记录浏览位置(Shift + Alt + L)
+					CtrlCmd: false,
+					WinCtrl: false,
+					Shift: true,
+					Alt: true,
+					key: 'L',
+				},
+				clear: {
+					// 移除浏览位置(Ctrl + Shift + Alt + L)
+					CtrlCmd: true,
+					WinCtrl: false,
+					Shift: true,
+					Alt: true,
+					key: 'L',
+				},
+			},
+			menu: {
+				block: {
+					// 块菜单开关(Shift + Alt + M)
+					CtrlCmd: false,
+					WinCtrl: false,
+					Shift: true,
+					Alt: true,
+					key: 'M',
+				},
+			},
 		},
 	},
 };
@@ -1698,6 +1848,7 @@ export var config = {
 export var custom = {
 	theme: {
 		toolbar: {},
+		location: {},
 	},
 };
 
@@ -1707,19 +1858,25 @@ export async function saveCustomFile(custom, path = config.custom.path) {
 }
 
 try {
-	let temp = await import('/widgets/custom.js');
-	if (temp.config != null) {
-		config = merge(config, temp.config);
+	// 合并配置文件 custom.js
+	const customjs = await import('/widgets/custom.js');
+	if (customjs.config != null) {
+		merge(config, customjs.config);
 	}
+
+	// 初始化用户状态
 	custom.theme.toolbar[config.theme.menu.block.toolbar.id] = { default: false };
 	custom.theme.toolbar[config.theme.style.guides.toolbar.id] = { default: false };
 	custom.theme.toolbar[config.theme.invert.toolbar.id] = { default: false };
 	custom.theme.toolbar[config.theme.typewriter.switch.toolbar.id] = { default: false };
-	temp = await getFile(config.custom.path);
-	temp = await temp.json();
-	custom = merge(custom, temp);
+	custom.theme.toolbar[config.theme.location.record.toolbar.id] = { default: false };
+
+	// 合并配置文件 custom.json
+	let customjson = await getFile(config.custom.path);
+	customjson = await customjson.json();
+	custom = merge(custom, customjson);
 } catch (err) {
-	console.log(err);
+	console.warn(err);
 } finally {
 	console.log(config);
 	console.log(custom);
