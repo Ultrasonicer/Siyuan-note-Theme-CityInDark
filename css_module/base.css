@@ -1,7 +1,7 @@
 :root {
 	/* 主色 */
-	--b3-theme-primary: #22BCF2;
-	--b3-theme-primary-light: #2A74DB;
+	--b3-theme-primary: #22bcf2;
+	--b3-theme-primary-light: #2a74db;
 	--b3-theme-primary-lighter: #1e6661;
 	--b3-theme-primary-lightest: #2b2e4996;
 	--b3-theme-secondary: #fff7cd;
@@ -11,14 +11,14 @@
 	--b3-theme-error: #d23f31;
 
 	/* 文字颜色 */
-    --b3-theme-on-primary: #fff;
-    --b3-theme-on-secondary: #fff;
-    --b3-theme-on-background: #c9d1d9;
-    --b3-theme-on-surface: #9aa0a6;
-    --b3-theme-on-error: #fff;
+	--b3-theme-on-primary: #fff;
+	--b3-theme-on-secondary: #fff;
+	--b3-theme-on-background: #c9d1d9;
+	--b3-theme-on-surface: #9aa0a6;
+	--b3-theme-on-error: #fff;
 
 	/* 字体 */
-	--b3-font-family: 'HarmonyOS', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Win11 Emoji', 'Segoe UI Symbol', 'Android Emoji', 'EmojiSymbols';
+	--b3-font-family: 'LXGW WenKai Mono', 'HarmonyOS', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Win11 Emoji', 'Segoe UI Symbol', 'Android Emoji', 'EmojiSymbols';
 	--b3-font-family-code: 'FiraCode', mononoki, Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Segoe UI Symbol', 'Android Emoji', 'EmojiSymbols';
 	--b3-font-family-graph: mononoki;
 	--b3-font-family-math: KaTeX_Math;
@@ -146,7 +146,7 @@
 	--b3-protyle-inline-code-color: #b9bcbc;
 	--b3-protyle-inline-code-background: #225764;
 	--b3-protyle-inline-blockref-color: #31c8ff;
-	--b3-protyle-inline-blockref-hover-color: #22BCF2;
+	--b3-protyle-inline-blockref-hover-color: #22bcf2;
 	--blockquote-border-color: #6d9a9a;
 	/* 表格 */
 	--b3-table-border-color: #313d49;

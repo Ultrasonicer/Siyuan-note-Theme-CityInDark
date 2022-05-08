@@ -6,7 +6,6 @@
 
 /* 非聚焦页签样式 */
 .layout-tab-bar .item:not(.item--focus) {
-	background-color: #77d2f367 !important;
 	/* 圆角 */
 	border-radius: 15px, 15px, 0px, 0px;
 }
