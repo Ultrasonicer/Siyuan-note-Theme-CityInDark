@@ -15,7 +15,7 @@ body.body--win32 {
 .search__header,
 .b3-text-field--text,
 .b3-menu,
-.b3-menu__item,
+.b3-menu__item:not(.b3-menu__item--current),
 .b3-menu__item--show,
 .b3-menu__submenu,
 .dock,
