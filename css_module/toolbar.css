@@ -1,10 +1,12 @@
 /* 工具栏样式 */
-/* 隐藏工具栏,鼠标移入显示 *
-.b3-tooltips {
-	height: 0px;
-}
-.b3-tooltips:hover {
-	height: 24px;
+
+.toolbar {
+	background-color: #00000000;
+	opacity: 0;
 }
 
-/* 工具栏样式结束 */
+/* 悬浮显示工具栏 */
+.toolbar:hover {
+	opacity: 1;
+	transition: 300ms;
+}

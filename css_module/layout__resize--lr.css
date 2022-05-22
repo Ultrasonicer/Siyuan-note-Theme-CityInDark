@@ -1,7 +1,12 @@
 /* 分隔线 */
 .layout__resize--lr {
-    cursor: col-resize;
-    width: 10px;
-    height: auto;
-/* 分隔线结束 */
+	cursor: col-resize;
+	/* width: 10px; */
+	height: auto;
+	/* 分隔线结束 */
+}
+
+/* 除去分隔线黑边 */
+.layout__resize {
+	z-index: 0 !important;
 }

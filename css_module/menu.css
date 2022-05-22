@@ -7,3 +7,11 @@
 .b3-menu__item--current {
 	background-color: #005a9673 !important;
 }
+.b3-menu__item--show {
+	background-color: #005a9673 !important;
+}
+
+/* 设置界面菜单样式 */
+.b3-label {
+	border-bottom: 0em;
+}
