@@ -8,5 +8,6 @@
 
 /* 除去分隔线黑边 */
 .layout__resize {
-	z-index: 0 !important;
+	z-index: 1 !important;
+	position: inherit;
 }
