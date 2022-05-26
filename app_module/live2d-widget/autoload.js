@@ -31,6 +31,7 @@ if (screen.width >= 768) {
 			//apiPath: 'https://live2d.fghrsh.net/api/',
 			//cdnPath: 'https://cdn.jsdelivr.net/gh/weihan-Chen/live2d_api/',
 			cdnPath: 'https://fastly.jsdelivr.net/gh/weihan-Chen/live2d_api/',
+			// cdnPath: 'https://purge.jsdelivr.net/gh/weihan-Chen/live2d_api/',
 			//能运行php环境的可以使用下列apiPath
 			//cdnPath: 'https://127.0.0.1/conf/appearance/themes/CityInDark/live2d_api/',
 		});
