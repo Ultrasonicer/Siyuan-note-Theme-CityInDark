@@ -2,7 +2,7 @@
 .protyle-wysiwyg .hljs {
 	color: #c9d1d9;
 	background: #0d11173a;
-	border-radius: 2em;
+	/* border-radius: 2em; */
 }
 
 .b3-typography .code-block .protyle-action,
