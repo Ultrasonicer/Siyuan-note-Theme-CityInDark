@@ -22,7 +22,8 @@ body.body--win32 {
 .protyle-toolbar,
 .inbox__details,
 .layout__empty,
-.layout__resize {
+.layout__resize,
+.status {
 	background-color: transparent;
 	background-image: url(../src/background.jpg);
 	/*background-color: #1e1e1e;*/
