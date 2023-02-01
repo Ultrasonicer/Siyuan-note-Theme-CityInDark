@@ -29,7 +29,7 @@
 	--b3-border-color: #1e1e1e;
 
 	/* 滚动条 */
-	--b3-scroll-color: #00455e70;
+	--b3-scroll-color: #b5ebff92;
 
 	/* 列表 */
 	--b3-list-hover: rgba(230, 230, 230, 0.05);
@@ -167,4 +167,11 @@
 	--custom-h4-color: #004b81;
 	--custom-h5-color: #4c728d;
 	--custom-h6-color: #768794;
+}
+
+/* 一些杂项 */
+
+/* 去掉黑线 */
+.status {
+	border-top: 0;
 }

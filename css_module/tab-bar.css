@@ -6,6 +6,7 @@
 
 .layout-tab-bar {
 	font-style: normal;
+	border-bottom: 0;
 }
 
 .layout__wnd--active .layout-tab-bar .item--focus,

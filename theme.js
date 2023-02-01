@@ -10,7 +10,7 @@ window.theme.loadScript = function (src, type = 'module', async = false, defer =
 };
 
 // 加载看板娘资源
-window.theme.loadScript('appearance/themes/CityInDark/app_module/live2d-widget/autoload.js');
+// window.theme.loadScript('appearance/themes/CityInDark/app_module/live2d-widget/autoload.js');
 // 加载窗口资源
 window.theme.loadScript('appearance/themes/CityInDark/js_module/module/window.js');
 window.theme.loadScript('appearance/themes/CityInDark/js_module/module/html.js', 'text/javascript');

@@ -40,10 +40,6 @@ Download the release package in [Releases](https://github.com/weihan-Chen/CityIn
 
 使用快捷键 Shift+Alt+T 可以开启打字机模式。
 
-## 注意
-
-本主题默认添加了看板娘，如需取消请删除 theme.js 相关片段。
-
 ## change log
 
 [版本日志](https://github.com/weihan-Chen/CityInDark/blob/main/CHANGELOG.md)

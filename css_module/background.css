@@ -23,7 +23,8 @@ body.body--win32 {
 .inbox__details,
 .layout__empty,
 .layout__resize,
-.status {
+.status,
+.protyle-hint {
 	background-color: transparent;
 	background-image: url(../src/background.jpg);
 	/*background-color: #1e1e1e;*/

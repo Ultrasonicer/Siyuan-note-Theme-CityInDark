@@ -1,7 +1,9 @@
 {
 	"name": "CityInDark",
-	"author": "weihan-Chen",
+	"author": "William Chan",
 	"url": "https://github.com/weihan-Chen",
-	"version": "0.1.9.20220525",
-	"modes": ["dark"]
+	"version": "0.2.0.20230201",
+	"modes": [
+		"dark"
+	]
 }
